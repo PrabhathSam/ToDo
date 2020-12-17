@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03CC53F6258BB874004A644D /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC53F5258BB874004A644D /* temp.swift */; };
+		03CC540C258BC684004A644D /* NoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC540B258BC684004A644D /* NoteDetail.swift */; };
 		03E4A2122589FF5A00FB6929 /* ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E4A2112589FF5A00FB6929 /* ToDoApp.swift */; };
 		03E4A2142589FF5A00FB6929 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E4A2132589FF5A00FB6929 /* ContentView.swift */; };
 		03E4A2162589FF5B00FB6929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E4A2152589FF5B00FB6929 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CC53F5258BB874004A644D /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
+		03CC540B258BC684004A644D /* NoteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetail.swift; sourceTree = "<group>"; };
 		03E4A20E2589FF5A00FB6929 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E4A2112589FF5A00FB6929 /* ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoApp.swift; sourceTree = "<group>"; };
 		03E4A2132589FF5A00FB6929 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +95,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03CC53F4258BB867004A644D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				03CC53F5258BB874004A644D /* temp.swift */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		03CC53FD258BBA88004A644D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E4A2132589FF5A00FB6929 /* ContentView.swift */,
+				03CC540B258BC684004A644D /* NoteDetail.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03CC53FE258BBA9F004A644D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03CC53FF258BBAAD004A644D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		03E4A2052589FF5A00FB6929 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +151,11 @@
 		03E4A2102589FF5A00FB6929 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				03CC53F4258BB867004A644D /* New Group */,
+				03CC53FF258BBAAD004A644D /* Resources */,
+				03CC53FE258BBA9F004A644D /* Model */,
+				03CC53FD258BBA88004A644D /* Views */,
 				03E4A2112589FF5A00FB6929 /* ToDoApp.swift */,
-				03E4A2132589FF5A00FB6929 /* ContentView.swift */,
 				03E4A2152589FF5B00FB6929 /* Assets.xcassets */,
 				03E4A21A2589FF5B00FB6929 /* Persistence.swift */,
 				03E4A21F2589FF5B00FB6929 /* Info.plist */,
@@ -163,7 +201,6 @@
 				42072B11A4002D90CB5015BE /* Pods-ToDoTests.debug.xcconfig */,
 				39A8724F494E0AEF3872965B /* Pods-ToDoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -418,6 +455,8 @@
 				03E4A2142589FF5A00FB6929 /* ContentView.swift in Sources */,
 				03E4A2122589FF5A00FB6929 /* ToDoApp.swift in Sources */,
 				03E4A21E2589FF5B00FB6929 /* ToDo.xcdatamodeld in Sources */,
+				03CC540C258BC684004A644D /* NoteDetail.swift in Sources */,
+				03CC53F6258BB874004A644D /* temp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

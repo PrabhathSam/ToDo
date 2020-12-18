@@ -26,7 +26,7 @@ import Foundation
      var body: some View {
          ZStack{
              Rectangle()
-                 .foregroundColor(light)
+                 .foregroundColor(Color.green)
                  .edgesIgnoringSafeArea(.all)
              
              VStack{

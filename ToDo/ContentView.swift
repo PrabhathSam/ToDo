@@ -29,21 +29,129 @@ struct ContentView: View {
             "topic":"topic4",
             "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         ],
+        [
+            "topic":"topic1",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic2",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic3",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic4",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],        [
+            "topic":"topic1",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic2",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic3",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic4",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],        [
+            "topic":"topic1",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic2",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic3",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic4",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],        [
+            "topic":"topic1",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic2",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic3",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic4",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],        [
+            "topic":"topic1",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic2",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic3",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic4",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],        [
+            "topic":"topic1",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic2",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic3",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
+        [
+            "topic":"topic4",
+            "note":"Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+        ],
         
     ]
     
+    
+    
     var body: some View {
-        
-        NavigationView {
-            List(views, id: \.self) { view in
-                NavigationLink(destination: NoteDetail()) {
-                    NoteRow(topic: view["topic"]!, note: view["note"]!)
+        ZStack{
+            NavigationView {
+                VStack{
+                    Spacer()
+                    List(views, id: \.self) { view in
+                        NavigationLink(destination: NoteDetail()) {
+                            NoteRow(topic: view["topic"]!, note: view["note"]!)
+                        }
+                    }
+                    .navigationTitle("TODO")
+                    .navigationBarHidden(true)
+                    
+                    NavigationLink(destination: NoteDetail()) {
+                        StyleButton()
+                    }
+                    .padding([.trailing, .leading], 50)
+                    
+                    
+                    SubmitButton(title: "ADD +", action: {
+                        
+                    }).foregroundColor(.white)
                 }
             }
-            .navigationTitle("Landmarks")
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -73,8 +181,36 @@ struct NoteRow: View {
                     .padding(.horizontal, 20.0)
                     .frame(maxWidth: .infinity)
             }
-        }
+        }.background(Color.green)
     }
 }
 
 
+struct SubmitButton: View {
+    var title:String
+    var action: () -> Void
+    
+    var body: some View {
+        Button( action: action) {
+            Text(title)
+                .bold()
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                //                .padding([.trailing, .leading], 50)
+                .background(Color.pink)
+                .cornerRadius(25)
+        }
+        .padding(.horizontal, 20.0)
+    }
+}
+
+struct StyleButton: View {
+    var body: some View {
+        Text("title")
+            .bold()
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            .background(Color.pink)
+            .cornerRadius(25)
+    }
+}
